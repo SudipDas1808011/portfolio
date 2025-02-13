@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudip Das - Mechatronics Graduate</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.95));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-info {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 0 auto 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            padding: 4rem 2rem 2rem; /* Added more top padding for the photo */
+        }
+
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .education-title {
+           
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1.5rem;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="profile-info">
+            <h1 class="name">Sudip Das</h1>
+            <h2 class="title">Mechatronics Graduate</h2>
+            <div class="profile-info">
+                <img src="sudip.jpg" alt="Sudip Das" class="profile-photo">
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sudipdas1808011@gmail.com" style="color: white; text-decoration: none;">
+                        sudipdas1808011@gmail.com
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+880 1722182577</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/sudipdas011/" style="color: white; text-decoration: none;">
+                        /sudipdas011
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/SudipDas1808011" style="color: white; text-decoration: none;">
+                        /SudipDas1808011
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Software Development</h3>
+                    <ul style="list-style: none;">
+                        <li>Android App Development</li>
+                        <li>Back-end Development</li>
+                        <li>Web Scraping (Python)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Engineering Tools</h3>
+                    <ul style="list-style: none;">
+                        <li>MATLAB (Modeling & Simulation)</li>
+                        <li>Solidworks</li>
+                        <li>PLC Programming</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <ul style="list-style: none;">
+                        <li>Assembly Language</li>
+                        <li>G-Code (CNC)</li>
+                        <li>IoT Development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">OMR Sheet Tool</h3>
+                        <p>A tool for filling up multiple-choice questions (MCQs) using Optical Mark Recognition technology.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Train Ticket Allocation System</h3>
+                        <p>An optimized web application for efficient utilization of unsold train tickets in quota-based systems. Improves revenue generation and service accessibility.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Fetching TV Channel</h3>
+                        <p>A private tool that fetches working TV channels for users, enhancing their viewing experience.</p>
+                    </div>
+                </div>
+                                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Competitive Programming</h3>
+                        <p>A platform for contests and practice problems to enhance coding skills in C++.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Student Management System</h3>
+                        <p>A Python-based application for managing student records, enhancing administrative efficiency.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Search with Voice</h3>
+                        <p>A voice-activated search tool that supports both English and Bangla languages, improving accessibility.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Assembly 8086 Practice</h3>
+                        <p>A project for practicing Assembly language programming, focusing on 8086 architecture.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">AVR Microcontroller Programming</h3>
+                        <p>A collection of C++ programs for programming AVR microcontrollers, aimed at embedded systems development.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Turtle Graphics</h3>
+                        <p>A Python project for drawing and designing using turtle graphics, promoting creativity in programming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3 class="education-title">BSc. in Mechatronics Engineering</h3>
+                <div class="education-details">
+                    <p>Rajshahi University of Engineering & Technology</p>
+                    <p>CGPA: 3.62/4.00 | 2024</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <h3 class="education-title">Higher Secondary Certificate (HSC)</h3>
+                <div class="education-details">
+                    <p>Notre Dame College, Dhaka</p>
+                    <p>GPA: 5.00/5.00 | 2018</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+                
+
